@@ -64,7 +64,7 @@ export default class UserController {
                 auth: { user: process.env.EMAIL, pass: process.env.PASSWORD }
             });
 
-            const verificationLink = `http://localhost:3200/api/user/verify/${verificationToken}`;
+            const verificationLink = `https://companieslisting-b.onrender.com/api/user/verify/${verificationToken}`;
             await transporter.sendMail({
                 to: email,
                 subject: "Verify your email",
